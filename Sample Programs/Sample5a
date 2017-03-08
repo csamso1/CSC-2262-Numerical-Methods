@@ -1,0 +1,8 @@
+%CSC 2262
+%Sample 5a
+
+t = 0:.001:20;
+u0 = [.5 0 ];
+options = odeset('AbsTol', 1e-7, 'RelTol', 1e-7);
+[t u] = ode45('saple5af', t, u0, options);
+line1x = []

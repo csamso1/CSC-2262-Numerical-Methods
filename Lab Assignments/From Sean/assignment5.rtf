@@ -1,0 +1,34 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf340
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf0 \CocoaLigature0 %Sean Marino\
+%CSC 2262\
+%Dr. Brener\
+%Assignment 5\
+\
+t = 0:.001:5;\
+u0 = [.8 0 .4 0 .6 0 .3 0 .5 0 .7 0];\
+options = odeset('RelTol',1e-7,'AbsTol',1e-7);\
+[t u] = ode45('assignment5f',t,u0,options);\
+line1x = [0 5];\
+line1y = [0 0];\
+figure(1);\
+plot(t,u(:,1),'b',t,u(:,3),'r',t,u(:,5),'g',t,u(:,7),'k',t,u(:,9),'c',t,u(:,11)$\
+axis([0 5 -1 1]);\
+set(gca,'xtick',0:5);\
+set(gca,'ytick',-1:.2:1);\
+xlabel('t');\
+ylabel('x1(blue),x2(red),x3(green),x4(black),x5(cyan),x6(magenta)');\
+title('Assignment 5, Figure 1');\
+figure(2);\
+plot(t,u(:,2),'b',t,u(:,4),'r',t,u(:,6),'g',t,u(:,8),'k',t,u(:,10),'c',t,u(:,12$\
+axis([0 5 -3.2 3.6]);\
+set(gca,'xtick',0:5);\
+set(gca,'ytick',-3.2:.4:3.6);\
+xlabel('t');\
+ylabel('v1(blue),v2(red),v3(green),v4(black),v5(cyan),v6(magenta)');\
+title('Assignment 5, Figure 2');\
+}

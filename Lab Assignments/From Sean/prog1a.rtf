@@ -1,0 +1,27 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf340
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf0 \CocoaLigature0 % Sean Marino\
+% CSC 2262\
+% cs2262xx\
+% Program 1a\
+accuracy = 1e-7;\
+f = @(x) 728*x^4 - 8249*x^3 + 33660*x^2 - 57996*x + 34992;\
+fp = @(x) (728 * 4)* x^3 - (8249 * 3) * x^2 + (33660 * 2) * x - 57996;\
+stepsize = 1*pi/180;\
+for(grid_point = 0:stepsize:5)\
+    left_end_point = grid_point;\
+    right_end_point = grid_point + stepsize;\
+    function_left = f(left_end_point);\
+    function_right =f(right_end_point);\
+    if(function_left * function_right < 0)\
+        guess = (left_end_point + right_end_point)/2;\
+        x = newton(f, fp, guess, accuracy);\
+        fprintf('x=%.5f\\n', x);\
+    end\
+\
+\
+}

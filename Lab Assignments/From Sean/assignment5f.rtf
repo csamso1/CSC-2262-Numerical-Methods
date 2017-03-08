@@ -1,0 +1,51 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf340
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf0 \CocoaLigature0 %Sean Marino\
+%CSC 2262\
+%Dr. Brener\
+%Function 5\
+\
+function f = assignment5f(t,uf);\
+m1 = .4;\
+m2 = .9;\
+m3 = .7;\
+m4 = .8;\
+m5 = .6;\
+m6 = .5;\
+k1 = 3.9;\
+k2 = 5.2;\
+k3 = 4.2;\
+k4 = 4.7;\
+k5 = 5.3;\
+k6 = 4.9;\
+k7 = 4.4;\
+v1 = uf(2);\
+x2 = uf(3);\
+v2 = uf(4);\
+x3 = uf(5);\
+v3 = uf(6);\
+x4 = uf(7);\
+v4 = uf(8);\
+x5 = uf(9);\
+v5 = uf(10);\
+x6 = uf(11);\
+v6 = uf(12);\
+f = zeros(12,1);\
+f(1) = v1;\
+f(2) = 1/m1*( -k1*x1      + k2*(x2-x1));\
+f(3) = v2;\
+f(4) = 1/m2*( -k2*(x2-x1) + k3*(x3-x2));\
+f(5) = v3;\
+f(6) = 1/m3*( -k3*(x3-x2) + k4*(x4-x3));\
+f(7) = v4;\
+f(8) = 1/m4*( -k4*(x4-x3) + k5*(x5-x4));\
+f(9) = v5;\
+f(10)= 1/m5*( -k5*(x5-x4) + k6*(x6-x5));\
+f(11)= v6;\
+f(12)= 1/m6*( -k6*(x6-x5) - k7*x6     );\
+\
+}
