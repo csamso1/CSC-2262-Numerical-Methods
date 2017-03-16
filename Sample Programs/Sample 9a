@@ -1,0 +1,4 @@
+%Sample 9a
+
+[xd yd] = textread('sample9a.dat');
+n=length(xd);
