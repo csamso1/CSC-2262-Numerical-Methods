@@ -22,4 +22,5 @@ a =[cos(alpha)	0			0			1	0	0	0	0
 	-sin(alpha)	-sin(beta)	-sin(gamma)	0	0	0	0	0];
 b = inv(a);
 F = b*d;
+%Prints array F
 F
