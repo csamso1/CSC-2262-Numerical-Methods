@@ -16,7 +16,7 @@ nx = 13;
 nt = 97;
 %function call to head1 to calculate unknown u, heat1 returns 2D array U, u0 gives initial condition
 u = heat1(f, u0, gleft, gright, a, nx, ny, L, T);
-%Have to define step size in x and t directions
+%Have to define step size in x and t directions, thats what hx and ht do
 hx = L/(nx-1);
 ht = T/(nt-1);
 x = 0:hx:L;
